@@ -1,5 +1,6 @@
+Address 78.47.168.73
+Address [2a01:4f8:c2c:ee0e::1]
 ORPort 9001
-ORPort [2a01:4f8:c2c:ee0e::1]:9001
 DirPort 9030
 ControlPort 9051
 SocksPort 0
