@@ -1,0 +1,17 @@
+---
+version: '3'
+services:
+  tor-relay:
+    image: ghcr.io/scifire/docker-tor-relay:main
+    container_name: tor-relay
+    ports:
+            - "127.0.0.1:9050:9050"
+            - 9001:9001
+            - 9030:9030
+            - "127.0.0.1:9051:9051"
+    volumes:
+      - ./docker/conf/my-relay/torrc:/etc/tor/torrc:ro
+      - /etc/localtime:/etc/localtime
+      - /var/lib/tor
+    restart: unless-stopped
+
