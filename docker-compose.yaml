@@ -1,9 +1,10 @@
 ---
-version: '3'
+version: '2'
 services:
   tor-relay:
     image: ghcr.io/scifire/docker-tor-relay:main
     container_name: tor-relay
+    mem_limit: 256M
     ports:
             - "127.0.0.1:9050:9050"
             - 9001:9001
